@@ -1,21 +1,16 @@
-var calculator=  {
-      addNumbers: function(firstNumber, secondNumber) {
-			return firstNumber + secondNumber;
-      }
+
+function hide() {
+    $("p").css("display","none");
 }
-
-describe("A spy", function() {
-
-  beforeEach(function() {
-    
-	//code to setup
  
-	});
+function show() {
+    $("p").css("display","block");
+}
+ 
+describe("Tests for Show Button on Form", function() {
 
-  it("tracks that the spy was called", function() {
+});
+ 
+describe("Tests for Hide Button on Form", function() {
 
-	//code to check method was called
-
-	});
-    
 });

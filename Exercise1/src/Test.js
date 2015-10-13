@@ -1,9 +1,12 @@
-function addingnumbers(first,second){
-return first+second;
+var calculator = {
+  sum: function(no1, no2) {
+      return no1 + no2;
+  }
 };
 
-describe("Add numbers", function () {
-    it("adds the numbers", function () {
-        //add code to create a test
-    });
+// specs code
+describe("calculator", function() { 
+  it("sum method should sum values", function() {
+    // write the test
+  });
 });

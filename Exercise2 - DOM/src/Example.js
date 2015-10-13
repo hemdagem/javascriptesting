@@ -1,21 +1,15 @@
-var message= null;
-var helloWorld =  {
-      setMessage: function(value) {
-        message = value;
-      }
+/// <reference path="https://code.jquery.com/jquery-1.11.3.min.js" />
+function hide() {
+    $("p").css("display", "none");
 }
 
-describe("A spy", function() {
+describe("Dom example tests", function () {
+    beforeEach(function() {
+        $("body").append("<div><p>Test</p></div>");
+    });
 
-  beforeEach(function() {
-    
-    spyOn(helloWorld, 'setMessage');
-    helloWorld.setMessage('Hello World!');
-      
-  });
-
-  it("tracks that the spy was called", function() {
-    expect(helloWorld.setMessage).toHaveBeenCalled();
-  });
-    
+    it("Hide should make paragraph not visible", function () {
+        hide();
+        expect($("p").is(":hidden")).toBe(true);
+    });
 });

@@ -1,29 +1,54 @@
-var calculator = {
-  sum: function(no1, no2) {
-      return no1 + no2;
-  }
+var View = {
+    getName: function () {
+        return $("#name").text();
+    },
+    display: function (value) {
+        $("#name").hide();
+        $("#greeting").text(value);
+    }
 };
 
-function calculate(no1, no2){
-    return calculator.sum(no1, no2);
-}
+var Service = {
+    greet: function (name) {
+        return "Hello " + name + "!";
+    }
+};
+
+function Presenter(view, service) {
+    function process() {
+        var name = view.getName();
+        var result = service.greet(name);
+        view.display(result);
+    }
+
+    return {
+        process: process
+    }
+};
+
+$(document).ready(function () {
+    var presenter = Presenter(View, Service);
+    presenter.process();
+});
 
 // specs code
-describe("calculator", function() {
-   
-	beforeEach(function() {
-		//any setups before each test if you need this
-	});
-   
-  it("sum method should sum values", function() {
-    expect(calculator.sum(1,2)).toEqual(3);
-  });
-  
-  it("should call calculator", function() {
-     // write the test
-  });
-    
-  it("should pass correct information to calculator", function() {
-     // write the test
-  });
+
+describe("Presenter tests", function() {
+    var subject = null;
+
+    beforeEach(function () {
+        subject = Presenter(View, Service);
+    });
+
+    it("calculate should call Service.greet", function () {
+        // write the test
+    });
+
+    it("calculate should call View.getName", function () {
+        // write the test
+    });
+
+    it("calculate should call View.display", function () {
+        // write the test
+    });
 });

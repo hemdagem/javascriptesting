@@ -5,7 +5,12 @@ var Service = {
 };
 
 describe("Service tests", function() { 
-  it("should return a greeting with your name", function() {
-    // write the test
-  });
+     it("Service should be defined", function () {
+        // write the test
+    });
+
+    it("should return a greeting with your name", function () {
+        // write the test
+    });
+
 });

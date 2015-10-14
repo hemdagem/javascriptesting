@@ -40,15 +40,15 @@ describe("Presenter tests", function() {
         subject = Presenter(View, Service);
     });
 
-    it("calculate should call Service.greet", function () {
+    it("presenter should call Service.greet", function () {
         // write the test
     });
 
-    it("calculate should call View.getName", function () {
+    it("presenter should call View.getName", function () {
         // write the test
     });
 
-    it("calculate should call View.display", function () {
+    it("presenter should call View.display", function () {
         // write the test
     });
 });

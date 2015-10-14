@@ -1,12 +1,22 @@
-function helloWorld(){return “Hello World!”;
-}
+        describe("A Matrix spy", function () {
+            it("tracks that Neo is the one", function () {
 
-describe("A spy", function() {
-it("tracks that the spy was called", function() {
+                var matrix, neo;
 
-spyOn(window, 'helloWorld');
-var message =helloWorld();
-expect(message).toHaveBeenCalled();
+                neo = {
+                    theOne: function() {
+                         return "I am the one!";
+                    }
+                }
 
-});
-});
+                matrix = {
+                    theOne: function () {
+                        return neo.theOne();
+                    }
+                };
+
+                spyOn(neo, 'theOne');
+                matrix.theOne();
+                expect(neo.theOne).toHaveBeenCalled();
+            });
+        });

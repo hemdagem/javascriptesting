@@ -1,8 +1,8 @@
-function helloWorld(){
-	return “Hello world”;
+function terminator(){
+	return "I'll be back!";
 }
-describe("Hello world test", function () {
-	it("says Hello word", function () {
-		expect(helloWorld()).toEqual("Hello world!");
+describe("Terminator test", function () {
+	it("says I'll be back!", function () {
+		expect(terminator()).toEqual("I'll be back!");
 	});
 });
